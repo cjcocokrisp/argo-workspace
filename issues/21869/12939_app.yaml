@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: simple-helm-chart
+  namespace: argocd
+spec:
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+    syncOptions:
+      - Validate=true
+      - createNamespace=true
+  destination:
+    namespace: test
+    server: https://kubernetes.default.svc
+  sources:
+    - repoURL: https://github.com/cjcocokrisp/argo-workspace
+      targetRevision: main
+      ref: valuesRepo
+    - repoURL: https://github.com/cjcocokrisp/argo-workspace
+      targetRevision: main
+      path: issues/21869/chart
+      helm:
+        valueFiles:
+          - $valuesRepo/issues/21869/values/testValues.yaml
+        values: |
+          nodeport: 30100
