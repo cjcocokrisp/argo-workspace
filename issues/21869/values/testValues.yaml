@@ -1,2 +1,2 @@
 name: test-values-deployment
-replicas: 2
+replicas: 5
