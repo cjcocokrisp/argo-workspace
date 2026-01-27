@@ -11,6 +11,7 @@ stringData:
   again: again
   itworked: trying another case
   onemore: shot
+  new: new
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -47,3 +48,4 @@ data:
   infinite: loopplz
   another: causeimessedup
   lets: see
+  new: new
