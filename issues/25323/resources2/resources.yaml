@@ -3,7 +3,7 @@ kind: Secret
 metadata:
   name: my-secret
   annotations:
-    argocd.argoproj.io/sync-wave: "2"
+    argocd.argoproj.io/sync-wave: "1"
 stringData:
   key: value
   please: break
@@ -20,7 +20,7 @@ metadata:
     test: test
     test2: label2
   annotations:
-    argocd.argoproj.io/sync-wave: "1"
+    argocd.argoproj.io/sync-wave: "2"
 spec:
   replicas: 1
   selector:
@@ -34,3 +34,15 @@ spec:
       containers:
       - name: nginx
         image: nginx:latest
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: my-config
+  annotations:
+    argocd.argoproj.io/sync-wave: "3"
+data:
+  key: value
+  key2: value2
+  infinite: loopplz
+  another: causeimessedup
