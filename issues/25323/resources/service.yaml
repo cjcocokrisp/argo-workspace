@@ -4,6 +4,7 @@ metadata:
   name: my-app-service
   labels:
     app: my-app
+    test: test
   annotations:
     argocd.argoproj.io/sync-wave: "3"
 spec:
