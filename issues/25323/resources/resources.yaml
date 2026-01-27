@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: my-config
   annotations:
-    argocd.argoproj.io/sync-wave: "1"
+    argocd.argoproj.io/sync-wave: "2"
 data:
   key: value
 ---
@@ -12,7 +12,7 @@ kind: Deployment
 metadata:
   name: my-app
   annotations:
-    argocd.argoproj.io/sync-wave: "2"
+    argocd.argoproj.io/sync-wave: "1"
 spec:
   replicas: 1
   selector:
