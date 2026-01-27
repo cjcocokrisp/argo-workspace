@@ -9,6 +9,7 @@ stringData:
   please: break
   ok: just try again
   again: again
+  itworked: trying another case
 ---
 apiVersion: apps/v1
 kind: Deployment
