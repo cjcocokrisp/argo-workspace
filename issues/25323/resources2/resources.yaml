@@ -3,9 +3,11 @@ kind: Secret
 metadata:
   name: my-secret
   annotations:
-    argocd.argoproj.io/sync-wave: "1"
+    argocd.argoproj.io/sync-wave: "2"
 stringData:
   key: value
+  please: break
+  ok: just try again
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -13,8 +15,9 @@ metadata:
   name: my-test
   labels:
     test: test
+    test2: label2
   annotations:
-    argocd.argoproj.io/sync-wave: "2"
+    argocd.argoproj.io/sync-wave: "1"
 spec:
   replicas: 1
   selector:
