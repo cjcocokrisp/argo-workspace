@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: health-check-on-deletion
+  name: health-check-on-deletion-second
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
@@ -12,7 +12,7 @@ spec:
     path: issues/25323/resources2
   destination:
     name: in-cluster
-    namespace: test
+    namespace: test2
   syncPolicy:
     syncOptions:
       - CreateNamespace=true

@@ -1,16 +1,16 @@
 apiVersion: v1
-kind: ConfigMap
+kind: Secret
 metadata:
-  name: my-config
+  name: my-secret
   annotations:
     argocd.argoproj.io/sync-wave: "1"
-data:
+stringData:
   key: value
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: my-app
+  name: my-test
   labels:
     test: test
   annotations:
@@ -19,11 +19,11 @@ spec:
   replicas: 1
   selector:
     matchLabels:
-      app: my-app
+      app: my-test
   template:
     metadata:
       labels:
-        app: my-app
+        app: my-test
     spec:
       containers:
       - name: nginx
