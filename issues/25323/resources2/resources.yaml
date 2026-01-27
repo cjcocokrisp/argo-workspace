@@ -11,6 +11,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: my-app
+  labels:
+    test: test
   annotations:
     argocd.argoproj.io/sync-wave: "2"
 spec:
