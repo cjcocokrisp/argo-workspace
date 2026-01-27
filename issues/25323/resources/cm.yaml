@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: my-config
   annotations:
-    argocd.argoproj.io/sync-wave: "1"
+    argocd.argoproj.io/sync-wave: "3"
 data:
   key: value
   key2: value2

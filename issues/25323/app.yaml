@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/cjcocokrisp/argo-workspace
     targetRevision: HEAD
-    path: issues/25323/resources2
+    path: issues/25323/resources
   destination:
     name: in-cluster
     namespace: test
