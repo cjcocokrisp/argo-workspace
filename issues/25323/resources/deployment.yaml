@@ -1,19 +1,9 @@
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: my-config
-  annotations:
-    argocd.argoproj.io/sync-wave: "2"
-data:
-  key: value
-  key2: value2
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: my-app
   annotations:
-    argocd.argoproj.io/sync-wave: "1"
+    argocd.argoproj.io/sync-wave: "2"
 spec:
   replicas: 1
   selector:
@@ -35,3 +25,5 @@ spec:
           limits:
             memory: "128Mi"
             cpu: "500m"
+        ports:
+        - containerPort: 80
