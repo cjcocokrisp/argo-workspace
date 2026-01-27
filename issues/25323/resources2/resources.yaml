@@ -10,6 +10,7 @@ stringData:
   ok: just try again
   again: again
   itworked: trying another case
+  onemore: shot
 ---
 apiVersion: apps/v1
 kind: Deployment
