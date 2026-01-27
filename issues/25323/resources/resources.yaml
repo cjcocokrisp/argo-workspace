@@ -6,6 +6,7 @@ metadata:
     argocd.argoproj.io/sync-wave: "2"
 data:
   key: value
+  key2: value2
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -33,4 +34,4 @@ spec:
             cpu: "250m"   
           limits:
             memory: "128Mi"
-            cpu: "500m"   
+            cpu: "500m"
