@@ -9,7 +9,7 @@ metadata:
     test3: test3
     test4: test4
   annotations:
-    argocd.argoproj.io/sync-wave: "1"
+    argocd.argoproj.io/sync-wave: "2"
 spec:
   type: ClusterIP
   selector:

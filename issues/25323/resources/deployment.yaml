@@ -6,7 +6,7 @@ metadata:
     test: test
     test2: test2
   annotations:
-    argocd.argoproj.io/sync-wave: "2"
+    argocd.argoproj.io/sync-wave: "1"
 spec:
   replicas: 1
   selector:
