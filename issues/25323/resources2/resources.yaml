@@ -8,6 +8,7 @@ stringData:
   key: value
   please: break
   ok: just try again
+  again: again
 ---
 apiVersion: apps/v1
 kind: Deployment
