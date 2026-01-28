@@ -3,7 +3,7 @@ kind: Secret
 metadata:
   name: my-secret
   annotations:
-    argocd.argoproj.io/sync-wave: "2"
+    argocd.argoproj.io/sync-wave: "1"
 stringData:
   key: value
   please: break
@@ -22,7 +22,7 @@ metadata:
     test: test
     test2: label2
   annotations:
-    argocd.argoproj.io/sync-wave: "1"
+    argocd.argoproj.io/sync-wave: "2"
 spec:
   replicas: 1
   selector:
@@ -51,3 +51,4 @@ data:
   lets: see
   new: new
   add: again
+  try: again
