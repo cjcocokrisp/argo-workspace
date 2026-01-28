@@ -34,8 +34,6 @@ spec:
         app: my-test
     spec:
       containers:
-        error:
-          fail: onpurpose
       - name: nginx
         image: nginx:latest
 ---
