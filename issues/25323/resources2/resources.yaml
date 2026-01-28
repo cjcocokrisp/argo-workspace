@@ -34,8 +34,6 @@ spec:
         app: my-test
     spec:
       containers:
-      error:
-        test: 1
       - name: nginx
         image: nginx:latest
 ---
