@@ -12,6 +12,7 @@ stringData:
   itworked: trying another case
   onemore: shot
   new: new
+  newnew: item
 ---
 apiVersion: apps/v1
 kind: Deployment
