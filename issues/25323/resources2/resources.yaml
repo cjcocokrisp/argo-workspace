@@ -2,6 +2,8 @@ apiVersion: v1
 kind: Secret
 metadata:
   name: my-secret
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
 stringData:
   key: value
   please: break
@@ -19,6 +21,8 @@ metadata:
   labels:
     test: test
     test2: label2
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
 spec:
   replicas: 1
   selector:
@@ -30,6 +34,8 @@ spec:
         app: my-test
     spec:
       containers:
+        error:
+          fail: onpurpose
       - name: nginx
         image: nginx:latest
 ---
@@ -37,6 +43,8 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: my-config
+  annotations:
+    argocd.argoproj.io/sync-wave: "3"
 data:
   key: value
   key2: value2
