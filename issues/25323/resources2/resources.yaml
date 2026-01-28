@@ -12,7 +12,7 @@ stringData:
   itworked: trying another case
   onemore: shot
   new: new
-  newnew: item
+  newnew: item`
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -50,3 +50,4 @@ data:
   another: causeimessedup
   lets: see
   new: new
+  add: again
