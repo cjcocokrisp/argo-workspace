@@ -13,6 +13,7 @@ stringData:
   onemore: shot
   new: new
   newnew: item`
+  bug: bug
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -54,3 +55,4 @@ data:
   try: again
   onemore: test
   again: again
+  wow: wow
