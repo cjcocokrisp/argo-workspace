@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-test
+  labels:
+    test: test
+    test2: label2
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-test
+  template:
+    metadata:
+      labels:
+        app: my-test
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest
