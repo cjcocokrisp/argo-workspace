@@ -15,3 +15,4 @@ data:
   timeforbug: bug
   fix: fix
   trywithout: bug
+  selfheal: test
