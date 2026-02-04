@@ -16,3 +16,4 @@ data:
   fix: fix
   trywithout: bug
   selfheal: test
+  selfheal2: test2
