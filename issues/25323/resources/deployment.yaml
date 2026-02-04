@@ -28,6 +28,6 @@ spec:
           limits:
             memory: "128Mi"
             cpu: "500m"
-        fdiosfjoadisjfois: invalid field test
+            notright: try
         ports:
         - containerPort: 80
