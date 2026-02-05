@@ -28,5 +28,6 @@ spec:
           limits:
             memory: "128Mi"
             cpu: "500m"
+            bad: field
         ports:
         - containerPort: 80
