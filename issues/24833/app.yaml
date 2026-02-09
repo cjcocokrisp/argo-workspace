@@ -13,6 +13,3 @@ spec:
   destination:
     name: in-cluster
     namespace: random
-  syncPolicy:
-    syncOptions:
-      - CreateNamespace=true
