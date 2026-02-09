@@ -2,5 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: my-config
+  annotations:
+      argocd.argoproj.io/sync-wave: "2"
 data:
   key: value
