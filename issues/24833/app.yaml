@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: rbac-namespace
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/cjcocokrisp/argo-workspace
+    targetRevision: HEAD
+    path: issues/24833/resources
+  destination:
+    name: in-cluster
+    namespace: random
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
