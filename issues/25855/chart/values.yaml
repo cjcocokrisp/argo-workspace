@@ -1,0 +1,3 @@
+name: nginx-deployment
+replicas: 1
+nodeport: 31000

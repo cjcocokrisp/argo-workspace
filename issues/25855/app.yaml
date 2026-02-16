@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: "25855"
+  namespace: argocd
+spec:
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+    syncOptions:
+      - Validate=true
+      - createNamespace=true
+  destination:
+    namespace: test
+    server: https://kubernetes.default.svc
+  sources:
+    - repoURL: https://github.com/cjcocokrisp/argo-workspace
+      targetRevision: main
+      path: issues/25855/resources
+    - repoURL: https://github.com/cjcocokrisp/argo-workspace
+      targetRevision: main
+      path: issues/25855/chart
+      helm:
+        values: |
+          nodeport: 30100
