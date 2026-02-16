@@ -4,3 +4,4 @@ metadata:
   name: my-config
 data:
   key: value
+  try: tobreak
