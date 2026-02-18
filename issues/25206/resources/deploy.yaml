@@ -6,6 +6,7 @@ metadata:
     argocd.argoproj.io/sync-options: Replace=true,Force=true
   labels:
     test: test
+    test2: test
 spec:
   replicas: 1
   selector:
