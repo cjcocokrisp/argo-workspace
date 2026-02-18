@@ -4,6 +4,8 @@ metadata:
   name: my-app-service
   annotations:
     argocd.argoproj.io/sync-options: Replace=true,Force=true
+  labels:
+    test: test
 spec:
   type: ClusterIP
   selector:
