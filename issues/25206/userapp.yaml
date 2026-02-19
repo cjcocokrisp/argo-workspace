@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: use-25206
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/cjcocokrisp/argo-workspace
+    targetRevision: HEAD
+    path: issues/25206/userresources
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: issue-25206
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+      - ApplyOutOfSyncOnly=true
+    automated:
+      selfHeal: true
