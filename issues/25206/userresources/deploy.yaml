@@ -20,7 +20,7 @@ spec:
         image: nginx:latest
         imagePullPolicy: Always
         ports:
-        - containerPort: 8085
+        - containerPort: 8086
         resources:
           requests:
             memory: "1Gi"
