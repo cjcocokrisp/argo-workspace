@@ -13,6 +13,7 @@ spec:
   template:
     metadata:
       labels:
+        test: test
         app: my-app
     spec:
       containers:
@@ -20,7 +21,7 @@ spec:
         image: nginx:latest
         imagePullPolicy: Always
         ports:
-        - containerPort: 8089
+        - containerPort: 8090
         resources:
           requests:
             memory: "1Gi"
