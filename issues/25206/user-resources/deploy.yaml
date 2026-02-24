@@ -5,6 +5,7 @@ metadata:
   labels:
     test: test
     test2: test
+    test3: testagain
 spec:
   replicas: 1
   selector:
