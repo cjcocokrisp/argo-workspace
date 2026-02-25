@@ -22,7 +22,7 @@ spec:
         image: nginx:latest
         imagePullPolicy: Always
         ports:
-        - containerPort: 8090
+        - containerPort: 8091
         resources:
           requests:
             memory: "1Gi"
