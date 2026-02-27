@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: my-app
+  annotations:
+    argocd.argoproj.io/sync-options: Force=true,Replace=true
   labels:
     test: test
     test2: test
