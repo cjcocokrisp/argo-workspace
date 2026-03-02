@@ -6,3 +6,4 @@ metadata:
     argocd.argoproj.io/sync-wave: "2"
 data:
   key: value
+  key2: value2
