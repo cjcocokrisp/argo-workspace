@@ -19,7 +19,7 @@ spec:
         valuesObject:
           name: tesitng-issue
           replicas: 1
-          labels: bruh
+          labels: spire2
     - repoURL: https://github.com/cjcocokrisp/argo-workspace
       targetRevision: main
       path: "issues/25855/resources"
