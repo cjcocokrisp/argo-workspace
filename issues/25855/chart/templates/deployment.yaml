@@ -11,6 +11,7 @@ spec:
     metadata:
       labels:
         app: nginx
+        key: {{ .Values.label }}
     spec:
       containers:
         - name: nginx
