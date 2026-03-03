@@ -11,7 +11,6 @@ spec:
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
-      - RespectIgnoreDifferences=true
   sources:
     - repoURL: https://github.com/cjcocokrisp/argo-workspace
       path: issues/25855/chart
@@ -24,9 +23,3 @@ spec:
     - repoURL: https://github.com/cjcocokrisp/argo-workspace
       targetRevision: main
       path: "issues/25855/resources"
-  ignoreDifferences:
-    - group: apps
-      kind: Deployment
-      jsonPointers:
-        - /metadata/name
-        - /spec/replicas
