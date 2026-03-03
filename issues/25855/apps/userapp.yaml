@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: test-app
+  namespace: argocd
+spec:
+  project: default
+  destination:
+    namespace: test
+    name: in-cluster
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
+  sources:
+    - repoURL: https://github.com/cjcocokrisp/argo-workspace
+      path: issues/25855/chart
+      targetRevision: main
+      helm:
+        valuesObject:
+          name: tesitng-issue
+    - repoURL: https://github.com/cjcocokrisp/argo-workspace
+      targetRevision: main
+      path: "issues/25855/resources"
