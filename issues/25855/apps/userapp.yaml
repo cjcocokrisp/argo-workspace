@@ -21,3 +21,8 @@ spec:
     - repoURL: https://github.com/cjcocokrisp/argo-workspace
       targetRevision: main
       path: "issues/25855/resources"
+  ignoreDifferences:
+    - group: apps
+      kind: Deployment
+      jsonPointers:
+        - /metadata/name
