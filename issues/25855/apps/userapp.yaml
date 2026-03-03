@@ -20,6 +20,7 @@ spec:
           name: tesitng-issue
           replicas: 1
           labels: spire2
+          nodeport: 31001
     - repoURL: https://github.com/cjcocokrisp/argo-workspace
       targetRevision: main
       path: "issues/25855/resources"
