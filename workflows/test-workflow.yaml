@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: test-workflow
+spec:
+  entrypoint: do-things
+  templates:
+    - name: do-things
+      container:
+        image: busybox
+        command: ["/bin/sh", "-c"]
+        args:
+          - |
+            ls -l
+            ls /bin
+            echo "Doing random things..." > /root/file.txt
+            cat /root/file.txt
+            df
+            uname
+            whoami
