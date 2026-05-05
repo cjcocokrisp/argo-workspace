@@ -1,0 +1,7 @@
+apiVersion: test.cjcocokrisp.dev/v1
+kind: Custom
+metadata:
+  name: custom-cr-test
+spec:
+  image: ghcr.io/cjcocokrisp/some-image-that-is-not-real
+  replicas: 29
