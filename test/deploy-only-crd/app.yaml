@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: deploy-only-crd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/cjcocokrisp/argo-workspace
+    targetRevision: HEAD
+    path: test/deploy-only-crd/resources
+  destination:
+    name: in-cluster
+    namespace: default
+  syncPolicy: {}
