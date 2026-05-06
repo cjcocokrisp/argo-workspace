@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: deploy-only-crd
+  name: crd-with-no-cr
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:

@@ -23,6 +23,7 @@ spec:
   names:
     plural: single-customs
     singular: single-custom
-    kind: Custom
+    kind: SingleCustom
+    listKind: SingleCustoms
     shortNames:
       - scstm
