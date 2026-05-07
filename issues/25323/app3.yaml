@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: health-check-on-deletion-pre-sync
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/cjcocokrisp/argo-workspace
+    targetRevision: HEAD
+    path: issues/25323/resources3
+  destination:
+    name: in-cluster
+    namespace: test3
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
