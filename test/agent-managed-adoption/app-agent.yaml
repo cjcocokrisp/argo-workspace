@@ -1,0 +1,16 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: adoption-test
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/cjcocokrisp/argo-workspace
+    path: test/agent-managed-adoption/resources
+  destination:
+    name: agent-managed
+    namespace: argocd
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
