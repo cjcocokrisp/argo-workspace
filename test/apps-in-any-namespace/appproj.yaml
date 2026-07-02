@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: app-namespaces
+  namespace: argocd
+spec:
+  description: "testing out apps in any namespace"
+  destinations:
+    - server: "*"
+      namespace: "*"
+  sourceNamespaces:
+    - apps*
+  sourceRepos:
+  - "https://github.com/argoproj/argocd-example-apps.git"
+  clusterResourceWhitelist:
+    - group: ""
+      kind: Namespace
