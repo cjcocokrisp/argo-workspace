@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: source-hydrator-app
+  namespace: argocd
+spec:
+  sourceHydrator:
+    drySource:
+      repoURL: https://github.com/cjcocokrisp/argo-workspace.git
+      path: test/source-hydrator/dry-manifests/chart
+      targetRevision: HEAD
+      helm:
+        parameters:
+          - name: replicas
+            value: 3
+          - name: keyvalue
+            value: "raging storm sweep"
+    syncSource:
+      targetBranch: test/hydrator
+      path: hydrated
