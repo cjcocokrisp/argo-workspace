@@ -10,7 +10,7 @@ spec:
     path: test/agent-managed-adoption/resources
   destination:
     name: agent-managed
-    namespace: argocd
+    namespace: test
   syncPolicy:
     syncOptions:
       - CreateNamespace=true

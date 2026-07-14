@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: guestbook-dontadopt
+  namespace: "argocd-managed"
+  annotations:
+    argocd.argoproj.io/adoption-policy: "never"
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/argoproj/argocd-example-apps
+    targetRevision: HEAD
+    path: kustomize-guestbook
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: adoption-test
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
