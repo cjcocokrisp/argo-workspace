@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: test-app
+  namespace: argocd
+spec:
+  project: default
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  sourceHydrator:
+    drySource:
+      repoURL: https://github.com/cjcocokrisp/argo-workspace.git
+      path: test/source-hydrator/dry-manifests/chart
+      targetRevision: HEAD
+      helm:
+        parameters:
+          - name: replicas
+            value: "2"
+          - name: keyvalue
+            value: "this will be promoted"
+    hydrateTo:
+      targetBranch: environment/testing-next
+    syncSource:
+      targetBranch: environment/testing
+      path: hydrated

@@ -1,0 +1,10 @@
+apiVersion: promoter.argoproj.io/v1alpha1
+kind: PromotionStrategy
+metadata:
+  name: test-strat
+spec:
+  environments:
+  - autoMerge: false
+    branch: environment/testing
+  gitRepositoryRef:
+    name: argo-workspace-git-repo 
