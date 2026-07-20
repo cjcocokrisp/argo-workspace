@@ -1,0 +1,8 @@
+{
+  "repoURL": "https://github.com/cjcocokrisp/argo-workspace.git",
+  "drySha": "b18d1da8bef6e0bd03a5d336b3a7c6423dba3506",
+  "author": "Christopher Coco <ccoco@redhat.com>",
+  "date": "2026-07-20T16:03:06Z",
+  "subject": "chore: sync manifests",
+  "body": "Signed-off-by: Christopher Coco <ccoco@redhat.com>\n"
+}
