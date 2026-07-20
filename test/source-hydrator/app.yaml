@@ -4,6 +4,10 @@ metadata:
   name: source-hydrator-app
   namespace: argocd
 spec:
+  project: default
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
   sourceHydrator:
     drySource:
       repoURL: https://github.com/cjcocokrisp/argo-workspace.git
@@ -12,7 +16,7 @@ spec:
       helm:
         parameters:
           - name: replicas
-            value: 3
+            value: "3"
           - name: keyvalue
             value: "raging storm sweep"
     syncSource:

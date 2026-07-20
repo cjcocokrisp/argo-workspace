@@ -4,7 +4,7 @@ metadata:
   name: app2
   namespace: test-ns7
 spec:
-  project: source-namespaces-labeled
+  project: source-namespaces-custom
   source:
     repoURL: https://github.com/argoproj/argocd-example-apps.git
     targetRevision: HEAD
