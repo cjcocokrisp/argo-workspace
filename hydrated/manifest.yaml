@@ -1,8 +1,10 @@
 apiVersion: v1
 data:
-  key: these promotions were done through argocd operator deployed instances
+  key: these promotions were done through argocd operator deployed instances of argocd and the gitops promoter
 kind: ConfigMap
 metadata:
+  labels:
+    test: test
   name: configmap
   namespace: default
 ---
@@ -26,7 +28,7 @@ metadata:
   name: deployment
   namespace: default
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: nginx

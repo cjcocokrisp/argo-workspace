@@ -1,8 +1,8 @@
 {
   "repoURL": "https://github.com/cjcocokrisp/argo-workspace.git",
-  "drySha": "3f0b96022ddcee674657befd1b9ccccf5da298ec",
+  "drySha": "5f57bd78f7ef2118b7f15ce690167ce0e506c1dc",
   "author": "Christopher Coco <ccoco@redhat.com>",
-  "date": "2026-07-20T20:50:21Z",
-  "subject": "add gitops promoter stuff",
+  "date": "2026-07-29T18:30:11Z",
+  "subject": "update dry manifest",
   "body": "Signed-off-by: Christopher Coco <ccoco@redhat.com>\n"
 }
