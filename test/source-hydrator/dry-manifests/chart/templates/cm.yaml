@@ -3,5 +3,7 @@ kind: ConfigMap
 metadata:
   name: configmap
   namespace: default
+  labels:
+    test: "test"
 data:
   key: {{ .Values.keyvalue }}
