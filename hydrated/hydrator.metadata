@@ -1,6 +1,6 @@
 {
   "repoURL": "https://github.com/cjcocokrisp/argo-workspace.git",
-  "drySha": "5f57bd78f7ef2118b7f15ce690167ce0e506c1dc",
+  "drySha": "0e0f8d135c93796cc4c4b1b51e487a095de97bdd",
   "commands": [
     "helm template . --name-template operator-deployed-promotions --namespace testing-deploy --set replicas=2 --set \"keyvalue=these promotions were done through argocd operator deployed instances of argocd and the gitops promoter\" --include-crds"
   ]
