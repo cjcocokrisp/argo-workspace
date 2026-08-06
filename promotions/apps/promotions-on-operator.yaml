@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: operator-deployed-promotions
+  namespace: argocd
+spec:
+  project: default
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: promotions
+  sourceHydrator:
+    drySource:
+      repoURL: https://github.com/cjcocokrisp/argo-workspace.git
+      path: test/source-hydrator/dry-manifests/chart
+      targetRevision: HEAD
+      helm:
+        parameters:
+          - name: replicas
+            value: "3"
+          - name: keyvalue
+            value: "these promotions were done through argocd operator deployed instances"
+    hydrateTo:
+      targetBranch: environment/operator-next
+    syncSource:
+      targetBranch: environment/operator
+      path: hydrated
