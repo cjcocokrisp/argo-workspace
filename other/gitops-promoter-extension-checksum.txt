@@ -1,0 +1,1 @@
+e98dd8cb4c25c057752c3e3f7d18ed2bdfc00fbee9629fb89a9228487ba996cc  gitops-promoter-argocd-extension.tar.gz

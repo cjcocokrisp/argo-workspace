@@ -7,7 +7,7 @@ spec:
   project: default
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: argocd
   sources:
     - repoURL: https://github.com/cjcocokrisp/argo-workspace.git
       path: promotions/resources
