@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: promoter-demo
+  namespace: promoter
+spec:
+  project: default
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: promotions
+  sourceHydrator:
+    drySource:
+      repoURL: https://github.com/cjcocokrisp/argo-workspace.git
+      path: promoter-demo/manifests/chart
+      targetRevision: HEAD
+      helm:
+        parameters:
+          - name: replicas
+            value: "2"
+          - name: keyvalue
+            value: "hello everyone!"
+    hydrateTo:
+      targetBranch: environments/demo-next
+    syncSource:
+      targetBranch: environments/demo
+      path: hydrated
