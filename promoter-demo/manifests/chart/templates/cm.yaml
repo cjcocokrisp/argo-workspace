@@ -3,6 +3,6 @@ kind: ConfigMap
 metadata:
   name: configmap
   labels:
-    test: "test"
+    example: update
 data:
   key: {{ .Values.keyvalue }}

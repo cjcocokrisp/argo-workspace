@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: deployment
+  labels:
+    example: update
 spec:
   replicas: {{ .Values.replicas }}
   selector:

@@ -2,6 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   name: service
+  labels:
+    example: update
 spec:
   type: NodePort
   selector:
