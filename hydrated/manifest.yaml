@@ -4,12 +4,14 @@ data:
 kind: ConfigMap
 metadata:
   labels:
-    test: test
+    example: update
   name: configmap
 ---
 apiVersion: v1
 kind: Service
 metadata:
+  labels:
+    example: update
   name: service
 spec:
   ports:
@@ -23,9 +25,11 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
+  labels:
+    example: update
   name: deployment
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: nginx
