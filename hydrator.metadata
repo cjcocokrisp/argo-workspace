@@ -1,0 +1,8 @@
+{
+  "repoURL": "https://github.com/cjcocokrisp/argo-workspace.git",
+  "drySha": "c1e57de62e5ce08552e69c47e51cdf5176866e5b",
+  "author": "Christopher Coco <ccoco@redhat.com>",
+  "date": "2026-08-25T22:26:10Z",
+  "subject": "add promoter demo",
+  "body": "Signed-off-by: Christopher Coco <ccoco@redhat.com>\n"
+}

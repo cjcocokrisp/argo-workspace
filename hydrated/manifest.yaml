@@ -1,0 +1,73 @@
+apiVersion: v1
+data:
+  key: hello everyone!
+kind: ConfigMap
+metadata:
+  labels:
+    test: test
+  name: configmap
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: service
+spec:
+  ports:
+    - nodePort: 31000
+      port: 80
+      targetPort: 80
+  selector:
+    app: nginx
+  type: NodePort
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+        - image: nginx:latest
+          name: nginx
+          ports:
+            - containerPort: 80
+---
+apiVersion: promoter.argoproj.io/v1alpha1
+kind: GitRepository
+metadata:
+  name: argo-workspace-git-repo
+spec:
+  github:
+    name: argo-workspace
+    owner: cjcocokrisp
+  scmProviderRef:
+    name: github-scm-provider
+---
+apiVersion: promoter.argoproj.io/v1alpha1
+kind: PromotionStrategy
+metadata:
+  name: demo-strat
+spec:
+  environments:
+    - autoMerge: false
+      branch: environments/demo
+  gitRepositoryRef:
+    name: argo-workspace-git-repo
+---
+apiVersion: promoter.argoproj.io/v1alpha1
+kind: ScmProvider
+metadata:
+  name: github-scm-provider
+spec:
+  github:
+    appID: 4349556
+  secretRef:
+    name: gitops-promoter-gh-app
