@@ -1,8 +1,8 @@
 {
   "repoURL": "https://github.com/cjcocokrisp/argo-workspace.git",
-  "drySha": "3fbfa93403f3b28e6969bec5714e63409683a407",
+  "drySha": "79552fd70a8dd6e1b2e0980eb91ae3e5411bf0e1",
   "author": "Christopher Coco <ccoco@redhat.com>",
-  "date": "2026-09-25T20:45:11Z",
-  "subject": "fix keys",
+  "date": "2026-09-25T21:04:02Z",
+  "subject": "add new key to promoter cm",
   "body": "Signed-off-by: Christopher Coco <ccoco@redhat.com>\n"
 }
