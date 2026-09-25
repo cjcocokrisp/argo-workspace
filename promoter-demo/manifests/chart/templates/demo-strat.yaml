@@ -4,7 +4,8 @@ metadata:
   name: demo-strat
 spec:
   environments:
-  - autoMerge: false
-    branch: environments/demo
+    - autoMerge: false
+      branch: environments/openshift-test
   gitRepositoryRef:
-    name: argo-workspace-git-repo 
+    name: argo-workspace-git-repo
+

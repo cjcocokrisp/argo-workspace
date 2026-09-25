@@ -2,12 +2,12 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: promoter-demo
-  namespace: promoter
+  namespace: openshift-gitops
 spec:
   project: default
   destination:
     server: https://kubernetes.default.svc
-    namespace: promoter
+    namespace: openshift-gitops
   sourceHydrator:
     drySource:
       repoURL: https://github.com/cjcocokrisp/argo-workspace.git
@@ -20,7 +20,7 @@ spec:
           - name: keyvalue
             value: "hello everyone!"
     hydrateTo:
-      targetBranch: environments/demo-next
+      targetBranch: environments/openshift-test-next
     syncSource:
-      targetBranch: environments/demo
+      targetBranch: environments/openshift-test
       path: hydrated
