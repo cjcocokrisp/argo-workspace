@@ -1,0 +1,8 @@
+{
+  "repoURL": "https://github.com/cjcocokrisp/argo-workspace.git",
+  "drySha": "09e7d05e076eebe3b6926da21a1a0d1c02994b57",
+  "author": "Christopher Coco <ccoco@redhat.com>",
+  "date": "2026-08-27T21:40:36Z",
+  "subject": "test: remove crd",
+  "body": "Signed-off-by: Christopher Coco <ccoco@redhat.com>\n"
+}
