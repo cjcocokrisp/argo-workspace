@@ -1,0 +1,7 @@
+{
+  "repoURL": "https://github.com/cjcocokrisp/argo-workspace.git",
+  "drySha": "3fbfa93403f3b28e6969bec5714e63409683a407",
+  "commands": [
+    "helm template . --name-template promoter-demo --namespace openshift-gitops --set replicas=3 --set \"keyvalue=hello everyone!\" --include-crds"
+  ]
+}
