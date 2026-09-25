@@ -5,4 +5,5 @@ metadata:
   labels:
     example: update
 data:
-  key: {{ .Values.keyvalue }}
+  key: { { .Values.keyvalue } }
+  key2: bruh
