@@ -11,7 +11,7 @@ spec:
   sourceHydrator:
     drySource:
       repoURL: https://github.com/cjcocokrisp/argo-workspace.git
-      path: dev/tekton-commit-status
+      path: dev/tekton-commit-status/chart
       targetRevision: HEAD
       helm:
         parameters:

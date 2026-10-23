@@ -8,3 +8,7 @@ spec:
       branch: environments/tcs
   gitRepositoryRef:
     name: argo-workspace-git-repo
+  orderCommitStatusRef:
+    group: promoter.argoproj.io
+    kind: DependentsSuccessfulCommitStatus
+    name: tcs
