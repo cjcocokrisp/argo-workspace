@@ -12,3 +12,5 @@ spec:
     group: promoter.argoproj.io
     kind: DependentsSuccessfulCommitStatus
     name: tcs
+  proposedCommitStatuses:
+    - key: "tcs-test-proposed-proposed"
