@@ -2,6 +2,8 @@ apiVersion: promoter.argoproj.io/v1alpha1
 kind: PromotionStrategy
 metadata:
   name: promotion-strategy
+  labels:
+    key: valuejustforcinganupdate
 spec:
   environments:
     - autoMerge: false
