@@ -1,0 +1,8 @@
+{
+  "repoURL": "https://github.com/cjcocokrisp/argo-workspace.git",
+  "drySha": "651054b3b22034c82b1956c0737fe6375f2d465e",
+  "author": "Christopher Coco <ccoco@redhat.com>",
+  "date": "2026-10-23T20:32:31Z",
+  "subject": "add more for the tekton commit status test",
+  "body": "Signed-off-by: Christopher Coco <ccoco@redhat.com>\n"
+}
