@@ -7,13 +7,11 @@ spec:
   project: default
   source:
     repoURL: https://github.com/cjcocokrisp/argo-workspace
-    targetRevision: HEAD
-    path: test/agent-managed-adoption/resources
+    path: dev/agent-managed-adoption/resources
   destination:
-    name: in-cluster
+    name: agent-managed
     namespace: test
   syncPolicy:
-    automated:
-      selfHeal: true
     syncOptions:
       - CreateNamespace=true
+
