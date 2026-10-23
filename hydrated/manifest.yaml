@@ -40,6 +40,15 @@ spec:
             - containerPort: 80
 ---
 apiVersion: promoter.argoproj.io/v1alpha1
+kind: DependentsSuccessfulCommitStatus
+metadata:
+  name: tcs
+spec:
+  key: dependents-successful
+  promotionStrategyRef:
+    name: promotion-strategy
+---
+apiVersion: promoter.argoproj.io/v1alpha1
 kind: GitRepository
 metadata:
   name: argo-workspace-git-repo
@@ -60,6 +69,10 @@ spec:
       branch: environments/tcs
   gitRepositoryRef:
     name: argo-workspace-git-repo
+  orderCommitStatusRef:
+    group: promoter.argoproj.io
+    kind: DependentsSuccessfulCommitStatus
+    name: tcs
 ---
 apiVersion: promoter.argoproj.io/v1alpha1
 kind: ScmProvider
