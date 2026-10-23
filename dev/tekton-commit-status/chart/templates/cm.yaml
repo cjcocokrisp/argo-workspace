@@ -4,3 +4,4 @@ metadata:
   name: configmap
 data:
   key: value
+  change: makeachange
