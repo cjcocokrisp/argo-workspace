@@ -74,6 +74,8 @@ spec:
     group: promoter.argoproj.io
     kind: DependentsSuccessfulCommitStatus
     name: tcs
+  proposedCommitStatuses:
+    - key: tcs-test-proposed-proposed
 ---
 apiVersion: promoter.argoproj.io/v1alpha1
 kind: ScmProvider
