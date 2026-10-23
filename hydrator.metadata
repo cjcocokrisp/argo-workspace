@@ -1,8 +1,8 @@
 {
   "repoURL": "https://github.com/cjcocokrisp/argo-workspace.git",
-  "drySha": "2313f64c3e9eb18d91074d817a412702322d22b3",
+  "drySha": "ce8a68a58a06dc4da246ec330153fb43277697de",
   "author": "Christopher Coco <ccoco@redhat.com>",
-  "date": "2026-10-23T21:13:21Z",
-  "subject": "add promoter extension checksum",
+  "date": "2026-10-23T21:30:36Z",
+  "subject": "add tcs to the environment",
   "body": "Signed-off-by: Christopher Coco <ccoco@redhat.com>\n"
 }

@@ -83,3 +83,11 @@ spec:
     appID: 4349556
   secretRef:
     name: gitops-promoter-gh-app
+---
+apiVersion: promoter.argoproj.io/v1alpha1
+kind: TektonCommitStatus
+metadata:
+  name: tcs-task-proposed-proposed
+spec:
+  promotionStrategyRef:
+    name: promotion-strategy
