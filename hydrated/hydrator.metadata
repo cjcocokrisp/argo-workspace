@@ -1,6 +1,6 @@
 {
   "repoURL": "https://github.com/cjcocokrisp/argo-workspace.git",
-  "drySha": "5720eb7a9ec5c9beae10646ea932a3b3858f1e66",
+  "drySha": "2313f64c3e9eb18d91074d817a412702322d22b3",
   "commands": [
     "helm template . --name-template tcs-test-app --namespace tcs-testing --set replicas=1 --include-crds"
   ]
