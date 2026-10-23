@@ -1,8 +1,8 @@
 {
   "repoURL": "https://github.com/cjcocokrisp/argo-workspace.git",
-  "drySha": "93f587150cc03998e1bb48d5bd4d9034bd7e1e0e",
+  "drySha": "77f05662212b7aa4472cc7e73045fd8d956baad6",
   "author": "Christopher Coco <ccoco@redhat.com>",
-  "date": "2026-10-23T21:30:36Z",
-  "subject": "add tcs to the environment",
+  "date": "2026-10-23T21:34:57Z",
+  "subject": "update cm",
   "body": "Signed-off-by: Christopher Coco <ccoco@redhat.com>\n"
 }
