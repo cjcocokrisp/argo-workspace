@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: tcs-test-app
+  namespace: argocd
+spec:
+  project: default
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: tcs-testing
+  sourceHydrator:
+    drySource:
+      repoURL: https://github.com/cjcocokrisp/argo-workspace.git
+      path: dev/tekton-commit-status
+      targetRevision: HEAD
+      helm:
+        parameters:
+          - name: replicas
+            value: "1"
+    hydrateTo:
+      targetBranch: environments/tcs
+    syncSource:
+      targetBranch: environments/tcs
+      path: hydrated
