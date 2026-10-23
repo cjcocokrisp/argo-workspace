@@ -1,0 +1,32 @@
+apiVersion: tekton.dev/v1
+kind: Task
+metadata:
+  name: output
+spec:
+  description: "Outputs all three types of results"
+  results:
+    - name: str
+    - name: list
+      type: array
+    - name: obj
+      type: object
+      description: "Metadata of the built artifact"
+      properties:
+        id:
+          type: string
+        version:
+          type: string
+        status:
+          type: string
+  steps:
+    - name: write-json-output
+      image: bash:latest
+      script: |
+        #!/usr/bin/env bash
+        echo "commitstatus" > $(results.obj.str)
+
+        ARRAY_STRING='["apple", "banana", "cherry"]'
+        echo -n "$ARRAY_STRING" | tee $(results.list.path)
+
+        JSON_STRING='{"id": "app-123", "version": "v1.0.4", "status": "stable"}'
+        echo -n "$JSON_STRING" > $(results.obj.path)

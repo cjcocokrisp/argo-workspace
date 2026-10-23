@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: configmap
+  labels:
+    example: update
+data:
+  key1: bruh2
+  key2: bruh
+  key3: bruh3333

@@ -1,0 +1,13 @@
+apiVersion: tekton.dev/v1
+kind: Task
+metadata:
+  name: hello
+spec:
+  description: "simple hello"
+  steps:
+    - name: echo
+      image: alpine
+      script: |
+        #!/bin/sh
+        set -e
+        echo "Hello World"
