@@ -1,6 +1,6 @@
 {
   "repoURL": "https://github.com/cjcocokrisp/argo-workspace.git",
-  "drySha": "ce8a68a58a06dc4da246ec330153fb43277697de",
+  "drySha": "93f587150cc03998e1bb48d5bd4d9034bd7e1e0e",
   "author": "Christopher Coco <ccoco@redhat.com>",
   "date": "2026-10-23T21:30:36Z",
   "subject": "add tcs to the environment",

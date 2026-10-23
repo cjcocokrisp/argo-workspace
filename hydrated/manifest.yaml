@@ -89,5 +89,10 @@ kind: TektonCommitStatus
 metadata:
   name: tcs-task-proposed-proposed
 spec:
+  key: tcs-test-proposed-proposed
   promotionStrategyRef:
     name: promotion-strategy
+  tektonResourceRef:
+    kind: Task
+    name: hello
+    serviceAccount: default
