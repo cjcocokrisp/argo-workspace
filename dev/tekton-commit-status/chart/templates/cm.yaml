@@ -5,3 +5,4 @@ metadata:
 data:
   key: value
   change: makeachange
+  addanotherkey: bruh
