@@ -1,0 +1,12 @@
+apiVersion: promoter.argoproj.io/v1alpha1
+kind: TektonCommitStatus
+metadata:
+  name: tcs-task-proposed-proposed
+spec:
+  promotionStrategyRef:
+    name: "promotion-strategy"
+  key: "tcs-test-proposed-proposed"
+  tektonResourceRef:
+    kind: "Task"
+    name: "hello"
+    serviceAccount: default
