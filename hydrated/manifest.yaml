@@ -121,7 +121,7 @@ metadata:
   name: tcs-task-output
 spec:
   expectedResults:
-    - expression: '"Result == commitstatus"'
+    - expression: Result == "commitstatus"
       key: str
   expression: Result.str == "commitstatus"
   key: tcs-test-task-output
