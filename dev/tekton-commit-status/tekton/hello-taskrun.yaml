@@ -11,4 +11,3 @@ spec:
         #!/bin/sh
         set -e
         echo "Hello World"
-        bruv
