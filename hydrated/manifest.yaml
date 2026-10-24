@@ -7,6 +7,7 @@ data:
   inputtestreal: realrealreal
   itworkedletstryagain: hello
   key: value
+  testingtheinputagain: test
   tryingoutput: pipelinetoo
 kind: ConfigMap
 metadata:
