@@ -1,8 +1,8 @@
 {
   "repoURL": "https://github.com/cjcocokrisp/argo-workspace.git",
-  "drySha": "98b71f769e1f174d91cb5431b2ca19b3a5eaff87",
+  "drySha": "d35edae5d0d4a690dafe9f4ece8dc261f56e0608",
   "author": "Christopher Coco <ccoco@redhat.com>",
-  "date": "2026-10-23T23:15:26Z",
-  "subject": "add another test",
+  "date": "2026-10-24T17:44:03Z",
+  "subject": "update cm for testing chart",
   "body": "Signed-off-by: Christopher Coco <ccoco@redhat.com>\n"
 }
