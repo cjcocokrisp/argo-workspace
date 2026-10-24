@@ -107,8 +107,8 @@ spec:
     kind: Task
     name: input
     parameters:
-      - branch: '{{ .Branch }}'
-        sha: '{{ .TargetedSha }}'
+      branch: '{{ .Branch }}'
+      sha: '{{ .TargetedSha }}'
     serviceAccount: default
 ---
 apiVersion: promoter.argoproj.io/v1alpha1
