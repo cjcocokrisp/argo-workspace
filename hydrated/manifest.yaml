@@ -99,7 +99,7 @@ kind: TektonCommitStatus
 metadata:
   name: tcs-task-input
 spec:
-  key: tcs-test-proposed-proposed
+  key: tcs-test-task-input
   promotionStrategyRef:
     name: promotion-strategy
   pruneRun: true
