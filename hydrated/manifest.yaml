@@ -115,6 +115,36 @@ spec:
 apiVersion: promoter.argoproj.io/v1alpha1
 kind: TektonCommitStatus
 metadata:
+  name: tcs-task-output
+spec:
+  expectedResults:
+    - expression: Result == commitstatus
+      key: null
+  expression: Result.str == commitstatus
+  key: tcs-test-task-output
+  promotionStrategyRef:
+    name: promotion-strategy
+  tektonResourceRef:
+    kind: Task
+    name: output
+    serviceAccount: default
+---
+apiVersion: promoter.argoproj.io/v1alpha1
+kind: TektonCommitStatus
+metadata:
+  name: tcs-task-pipeline
+spec:
+  key: tcs-test-pipeline
+  promotionStrategyRef:
+    name: promotion-strategy
+  tektonResourceRef:
+    kind: Pipeline
+    name: hello-output-pipeline
+    serviceAccount: default
+---
+apiVersion: promoter.argoproj.io/v1alpha1
+kind: TektonCommitStatus
+metadata:
   name: tcs-task-proposed-proposed
 spec:
   key: tcs-test-proposed-proposed
