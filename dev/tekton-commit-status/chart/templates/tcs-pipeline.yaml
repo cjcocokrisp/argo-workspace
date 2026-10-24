@@ -1,0 +1,12 @@
+apiVersion: promoter.argoproj.io/v1alpha1
+kind: TektonCommitStatus
+metadata:
+  name: tcs-task-pipeline
+spec:
+  promotionStrategyRef:
+    name: "promotion-strategy"
+  key: "tcs-test-pipeline"
+  tektonResourceRef:
+    kind: "Pipeline"
+    name: "hello-output-pipeline"
+    serviceAccount: default

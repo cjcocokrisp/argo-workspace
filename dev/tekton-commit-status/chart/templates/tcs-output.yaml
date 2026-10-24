@@ -1,0 +1,16 @@
+apiVersion: promoter.argoproj.io/v1alpha1
+kind: TektonCommitStatus
+metadata:
+  name: tcs-task-output
+spec:
+  promotionStrategyRef:
+    name: "promotion-strategy"
+  key: "tcs-test-task-output"
+  tektonResourceRef:
+    kind: "Task"
+    name: "output"
+    serviceAccount: default
+  expression: "Result.str == commitstatus"
+  expectedResults:
+    - key:
+      expression: "Result == commitstatus"
