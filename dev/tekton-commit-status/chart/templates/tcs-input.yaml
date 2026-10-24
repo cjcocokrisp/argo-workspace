@@ -5,7 +5,7 @@ metadata:
 spec:
   promotionStrategyRef:
     name: "promotion-strategy"
-  key: "tcs-test-proposed-proposed"
+  key: "tcs-test-task-input"
   tektonResourceRef:
     kind: "Task"
     name: "input"
