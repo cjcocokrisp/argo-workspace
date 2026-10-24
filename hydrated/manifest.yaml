@@ -4,6 +4,7 @@ data:
   change: makeachange
   failtest: failtest
   inputtest: inputtest
+  inputtestreal: realrealreal
   itworkedletstryagain: hello
   key: value
 kind: ConfigMap
