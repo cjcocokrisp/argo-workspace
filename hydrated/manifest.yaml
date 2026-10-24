@@ -3,6 +3,7 @@ data:
   addanotherkey: bruh
   change: makeachange
   failtest: failtest
+  inputtest: inputtest
   itworkedletstryagain: hello
   key: value
 kind: ConfigMap
