@@ -12,5 +12,5 @@ spec:
     serviceAccount: default
     parameters:
       - branch: "{{ "{{" }} .Branch {{ "}}" }}"
-      - sha: "{{ "{{" }} .TargetedSha {{ "}}" }}"
+        sha: "{{ "{{" }} .TargetedSha {{ "}}" }}"
   pruneRun: true
