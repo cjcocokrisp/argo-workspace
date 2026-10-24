@@ -1,8 +1,8 @@
 {
   "repoURL": "https://github.com/cjcocokrisp/argo-workspace.git",
-  "drySha": "0b7ced2dfc792d3a944ad3ec18f707e3ad952d8a",
+  "drySha": "bc2564053c5f62aa75a6387d10ba2b181db2a3b5",
   "author": "Christopher Coco <ccoco@redhat.com>",
-  "date": "2026-10-24T19:21:21Z",
-  "subject": "fr this time test the input",
+  "date": "2026-10-24T20:00:16Z",
+  "subject": "add two more tcs",
   "body": "Signed-off-by: Christopher Coco <ccoco@redhat.com>\n"
 }
