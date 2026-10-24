@@ -1,8 +1,8 @@
 {
   "repoURL": "https://github.com/cjcocokrisp/argo-workspace.git",
-  "drySha": "3a7b2f2882654a3db0e0c077c83e8f3982aa67e1",
+  "drySha": "2c13a9317a8f7bcba5ac89a75c71109482a9ab36",
   "author": "Christopher Coco <ccoco@redhat.com>",
-  "date": "2026-10-24T20:25:41Z",
-  "subject": "add another cm thing",
+  "date": "2026-10-24T20:53:31Z",
+  "subject": "add another field",
   "body": "Signed-off-by: Christopher Coco <ccoco@redhat.com>\n"
 }
