@@ -1,0 +1,23 @@
+apiVersion: tekton.dev/v1
+kind: Task
+metadata:
+  name: input
+spec:
+  description: "simple take some input then output it"
+  params:
+    - name: branch
+      description: "the branch the promotion is taking place on"
+      type: string
+      default: "THIS SHOULD NOT BE PRINTED"
+    - name: sha
+      description: "the commit sha"
+      type: string
+      default: "THIS SHOULD NOT BE PRINTED"
+  steps:
+    - name: echo
+      image: alpine
+      script: |
+        #!/bin/sh
+        set -e
+        echo "BRANCH = $(params.branch)"
+        echo "SHA = $(params.sha)"

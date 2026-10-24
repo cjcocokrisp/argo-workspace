@@ -1,0 +1,40 @@
+apiVersion: tekton.dev/v1
+kind: Pipeline
+metadata:
+  name: combined-pipeline
+spec:
+  params:
+    - name: branch
+      description: "the branch the promotion is taking place on"
+      type: string
+      default: "THIS SHOULD NOT BE PRINTED"
+    - name: sha
+      description: "the commit sha"
+      type: string
+      default: "THIS SHOULD NOT BE PRINTED"
+
+  tasks:
+    - name: hello
+      taskRef:
+        name: hello
+    - name: output
+      taskRef:
+        name: output
+    - name: input
+      taskRef:
+        name: input
+      params:
+        - name: branch
+          value: $(params.branch)
+        - name: sha
+          value: $(params.sha)
+  results:
+    - name: str
+      description: "string output"
+      value: $(tasks.output.results.str)
+    - name: obj
+      description: "object output"
+      value: $(tasks.output.results.obj)
+    - name: list
+      description: "array output"
+      value: $(tasks.output.results.list[*])

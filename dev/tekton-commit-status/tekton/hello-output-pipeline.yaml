@@ -1,0 +1,22 @@
+apiVersion: tekton.dev/v1
+kind: Pipeline
+metadata:
+  name: hello-output-pipeline
+spec:
+  tasks:
+    - name: hello
+      taskRef:
+        name: hello
+    - name: output
+      taskRef:
+        name: output
+  results:
+    - name: str
+      description: "string output"
+      value: $(tasks.output.results.str)
+    - name: obj
+      description: "object output"
+      value: $(tasks.output.results.obj)
+    - name: list
+      description: "array output"
+      value: $(tasks.output.results.list[*])
