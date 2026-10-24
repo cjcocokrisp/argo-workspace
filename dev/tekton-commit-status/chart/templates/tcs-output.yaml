@@ -13,4 +13,4 @@ spec:
   expression: 'Result.str == "commitstatus"'
   expectedResults:
     - key: str
-      expression: '"Result == commitstatus"'
+      expression: 'Result == "commitstatus"'
