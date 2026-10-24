@@ -10,7 +10,7 @@ spec:
     kind: "Task"
     name: "input"
     serviceAccount: default
-    params:
+    parameters:
       - branch: "{{ "{{" }} .Branch {{ "}}" }}"
       - sha: "{{ "{{" }} .TargetedSha {{ "}}" }}"
   pruneRun: true
