@@ -106,7 +106,7 @@ spec:
   tektonResourceRef:
     kind: Task
     name: input
-    params:
+    parameters:
       - branch: '{{ .Branch }}'
       - sha: '{{ .TargetedSha }}'
     serviceAccount: default
