@@ -84,6 +84,8 @@ spec:
   proposedCommitStatuses:
     - key: tcs-test-proposed-proposed
     - key: tcs-test-task-input
+    - key: tcs-test-task-output
+    - key: tcs-test-pipeline
 ---
 apiVersion: promoter.argoproj.io/v1alpha1
 kind: ScmProvider
@@ -119,7 +121,7 @@ metadata:
 spec:
   expectedResults:
     - expression: Result == commitstatus
-      key: null
+      key: str
   expression: Result.str == commitstatus
   key: tcs-test-task-output
   promotionStrategyRef:

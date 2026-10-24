@@ -1,8 +1,8 @@
 {
   "repoURL": "https://github.com/cjcocokrisp/argo-workspace.git",
-  "drySha": "bc2564053c5f62aa75a6387d10ba2b181db2a3b5",
+  "drySha": "cd9bde47ebfab7227b5ae24ef2b8f313259a4a17",
   "author": "Christopher Coco <ccoco@redhat.com>",
-  "date": "2026-10-24T20:00:16Z",
-  "subject": "add two more tcs",
+  "date": "2026-10-24T20:04:45Z",
+  "subject": "add tcs to promo strat",
   "body": "Signed-off-by: Christopher Coco <ccoco@redhat.com>\n"
 }
