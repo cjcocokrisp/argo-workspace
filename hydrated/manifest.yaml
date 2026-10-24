@@ -81,6 +81,7 @@ spec:
     name: tcs
   proposedCommitStatuses:
     - key: tcs-test-proposed-proposed
+    - key: tcs-test-task-input
 ---
 apiVersion: promoter.argoproj.io/v1alpha1
 kind: ScmProvider
@@ -91,6 +92,23 @@ spec:
     appID: 4349556
   secretRef:
     name: gitops-promoter-gh-app
+---
+apiVersion: promoter.argoproj.io/v1alpha1
+kind: TektonCommitStatus
+metadata:
+  name: tcs-task-input
+spec:
+  key: tcs-test-proposed-proposed
+  promotionStrategyRef:
+    name: promotion-strategy
+  pruneRun: true
+  tektonResourceRef:
+    kind: Task
+    name: input
+    params:
+      - branch: '{{ .Branch }}'
+      - sha: '{{ .TargetedSha }}'
+    serviceAccount: default
 ---
 apiVersion: promoter.argoproj.io/v1alpha1
 kind: TektonCommitStatus
