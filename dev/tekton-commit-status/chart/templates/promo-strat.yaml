@@ -17,3 +17,5 @@ spec:
   proposedCommitStatuses:
     - key: "tcs-test-proposed-proposed"
     - key: "tcs-test-task-input"
+    - key: "tcs-test-task-output"
+    - key: "tcs-test-pipeline"

@@ -12,5 +12,5 @@ spec:
     serviceAccount: default
   expression: "Result.str == commitstatus"
   expectedResults:
-    - key:
+    - key: str
       expression: "Result == commitstatus"
