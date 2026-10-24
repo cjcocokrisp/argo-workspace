@@ -16,3 +16,4 @@ spec:
     name: tcs
   proposedCommitStatuses:
     - key: "tcs-test-proposed-proposed"
+    - key: "tcs-test-task-input"
