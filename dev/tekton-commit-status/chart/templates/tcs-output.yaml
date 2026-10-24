@@ -10,7 +10,7 @@ spec:
     kind: "Task"
     name: "output"
     serviceAccount: default
-  expression: "Result.str == commitstatus"
+  expression: 'Result.str == "commitstatus"'
   expectedResults:
     - key: str
-      expression: "Result == commitstatus"
+      expression: '"Result == commitstatus"'
