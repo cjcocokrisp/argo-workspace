@@ -9,6 +9,7 @@ data:
   key: value
   outputtest: testingmanualbeforepr
   pipelineinputtest: testingpipelineinput
+  takingalookattheprresource: test
   testingtheinputagain: test
   tryingoutput: pipelinetoo
 kind: ConfigMap
