@@ -1,0 +1,16 @@
+apiVersion: promoter.argoproj.io/v1alpha1
+kind: PromotionStrategy
+metadata:
+  name: promotion-strategy
+spec:
+  environments:
+    - autoMerge: false
+      branch: environments/scs
+  gitRepositoryRef:
+    name: argo-workspace-git-repo
+  orderCommitStatusRef:
+    group: promoter.argoproj.io
+    kind: DependentsSuccessfulCommitStatus
+    name: scs-dependent
+  proposedCommitStatuses:
+    - key: "scs-commit-status-test"

@@ -1,0 +1,8 @@
+apiVersion: promoter.argoproj.io/v1alpha1
+kind: SCMCheckCommitStatus
+metadata:
+  name: scs-commit-status
+spec:
+  promotionStrategyRef:
+    name: "promotion-strategy"
+  key: "scs-commit-status-test"

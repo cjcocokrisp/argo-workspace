@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: scs-test-app
+  namespace: argocd
+spec:
+  project: default
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: scs-testing
+  sourceHydrator:
+    drySource:
+      repoURL: https://github.com/cjcocokrisp/argo-workspace.git
+      path: dev/scm-check-commit-status/chart
+      targetRevision: HEAD
+      helm:
+        parameters:
+          - name: replicas
+            value: "1"
+    hydrateTo:
+      targetBranch: environments/scs
+    syncSource:
+      targetBranch: environments/scs
+      path: hydrated
