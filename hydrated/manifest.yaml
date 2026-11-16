@@ -3,6 +3,7 @@ data:
   change: change
   key: value
   test: test
+  testing: test
 kind: ConfigMap
 metadata:
   name: configmap
