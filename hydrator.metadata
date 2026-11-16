@@ -1,8 +1,8 @@
 {
   "repoURL": "https://github.com/cjcocokrisp/argo-workspace.git",
-  "drySha": "59328b6af76b89c21f0a92449f71a13353f81716",
+  "drySha": "652121a2240eb08513472cd0062039e1290b2075",
   "author": "Christopher Coco <ccoco@redhat.com>",
-  "date": "2026-11-16T18:37:27Z",
-  "subject": "feat: add scm check commit status test",
+  "date": "2026-11-16T19:01:13Z",
+  "subject": "make change to cm for scs test",
   "body": "Signed-off-by: Christopher Coco <ccoco@redhat.com>\n"
 }
