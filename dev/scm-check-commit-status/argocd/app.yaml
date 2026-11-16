@@ -18,7 +18,7 @@ spec:
           - name: replicas
             value: "1"
     hydrateTo:
-      targetBranch: environments/scs
+      targetBranch: environments/scs-next
     syncSource:
       targetBranch: environments/scs
       path: hydrated
